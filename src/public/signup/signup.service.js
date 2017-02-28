@@ -9,7 +9,7 @@ function SignUpService($http) {
 	var service = this;
 	var user = {};
 	
-	var baseUrl = 'http://still-crag-33074.herokuapp.com/';
+	var baseUrl = 'http://still-crag-33074.herokuapp.com/menu_items/';
 	service.validateMenu = function(user) {
 		this.user = user;
 		var response =	$http({
