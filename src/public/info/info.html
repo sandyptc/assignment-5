@@ -1,0 +1,56 @@
+<div ng-controller="InfoController">
+	<div ng-if="user">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<label class="col-xs-2">First Name: </label>
+				</div>
+				<div class="col">
+					<label class="col-xs-2">{{user.firstname}}</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<label class="col-xs-2">Last Name: </label>
+				</div>
+				<div class="col">
+					<label class="col-xs-2">{{user.lastname}}</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<label class="col-xs-2">Email: </label>
+				</div>
+				<div class="col">
+					<label class="col-xs-2">{{user.email}}</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<label class="col-xs-2">Phone No: </label>
+				</div>
+				<div class="col">
+					<label class="col-xs-2">{{user.phone}}</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<label class="col-xs-2">Menu No: </label>
+				</div>
+				<div class="col">
+					<label class="col-xs-2">{{user.menu}}</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col col-xs-4">
+					<img class="img-responsive" width="250" height="150" ng-src="images/menu/{{user.category_short_name}}/{{user.category_short_name}}.jpg"/>
+					{{user.name}}
+					{{user.description}}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div ng-if="!user">
+		Not Signed Up Yet. <a ui-sref="signup">Sign up Now! </a>
+	</div>
+</div>

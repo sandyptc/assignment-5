@@ -1,0 +1,29 @@
+<div ng-controller="SignUpController">
+	<form novalidate class="form-horizontal css-form">
+		<div class="form-group">
+			<label class="col-xs-2">First Name: </label>
+			<input class="col-xs-3" type="text" ng-model="user.firstname" required />
+		</div>
+		<div class="form-group">
+			<label class="col-xs-2">Last Name: </label>
+			<input class="col-xs-3" type="text" ng-model="user.lastname" required /> 
+		</div>
+		<div class="form-group">
+			<label class="col-xs-2">Email:   </label>
+			<input class="col-xs-3" type="email" ng-model="user.email" required /> 
+		</div>
+		<div class="form-group">
+			<label class="col-xs-2">Phone No: </label>
+			<input class="col-xs-3" type="number" ng-model="user.phone" required />
+		</div>
+		<div class="form-group">
+			<label class="col-xs-2">Menu No: </label>
+			<input class="col-xs-3" type="text" ng-model="user.menu" required />
+			<div ng-if="errorMessage" class="error" >{{ errorMessage }}</div>
+		</div>
+		<input  class="col-xs-offset-1 col-xs-1 btn btn-primary" type="button" ng-click="reset()" value="Reset"/> 
+		<input  class="col-xs-1 btn btn-primary" type="submit" ng-click="update(user)" value="Submit"/> </br>
+	</form>
+	<div ng-if="successMessage" class="success" >{{ successMessage }}</div>
+</div>
+
